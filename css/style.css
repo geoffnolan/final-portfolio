@@ -161,10 +161,11 @@ a{
 
 /* Current cell? */
 .gallery-cell {
-  width: 66%;
+  width: 60%;
   height: 65vh;
   margin-right: 10px;
   background: #8C8;
+  opacity: 0.25;
   counter-increment: gallery-cell;
 }
 
@@ -195,8 +196,8 @@ a{
   }
 } 
   @media screen and (max-width: 560px) {
-    .topnav a{
-      padding: 5%;
+    .topnav a, .footnav a{
+      padding: 2.5vw;
     }
   }    
   @media screen and (max-width: 400px) {
