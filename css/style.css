@@ -1,0 +1,230 @@
+/*Recommended to use */
+* {
+  box-sizing: border-box; 
+}
+
+/*Body */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+  margin: 0;
+}
+
+/*Left bar*/
+.col-1 {
+  flex: 0;
+  background: #D7E8D4;
+  width: 10%;
+  justify-content: center;
+  align-items: center;
+}
+
+/*This code may or may not help center my links on left bar*/
+.col-1:first-child > span {
+  margin-right: auto;
+}
+.col-1:last-child > span {
+  margin-left: auto;
+}
+
+/*Col-2 is parent of header, content, footer*/
+.col-2 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/*Content is the main center whitespace*/
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+/*Article is basically content but also its child*/
+.content > article {
+  flex: 4;
+  min-height: 70vh;
+}
+
+/*Keeps the header navigation pinned to bottom of header*/
+header {
+  position: relative;
+}
+.topnav {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 10px;
+}
+
+/*Code to keep header and footer the same color*/
+header, footer {
+  background: yellowgreen;
+  height: 15vh;
+  max-height: 15vh;
+  overflow: hidden;
+}
+
+/* Padding for everything except the sidenav */
+header, footer, article, nav {
+  padding: 10px;
+}
+
+/* Styling the links inside the header navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Changing the color of header links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Adds a color to the active/current link in the header links */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Removes all link underlines */
+a{
+  text-decoration-line: none;
+}
+
+/*Positioning content in the side navigation*/
+.sidenav {
+  position: relative;
+  left: -30px;
+  text-align: left;
+  justify-content: center;
+  padding: none;
+  margin: none;
+  width: 10%;
+}
+
+/*Adds hover glow around links in sidenav*/
+.sidenav a:hover {
+  background-color: #fff;
+  color: black;
+}
+
+/*Styles links in the side navigation bar */
+.sidenav a {
+  position: relative;
+  line-height: 1em;
+  text-decoration: none;
+  font-family: helvetica;
+  color: rgba(#FFF, 0.35);
+  font-size: 10pt;
+  transition: all ease-out 300ms;
+  text-align: left;
+}
+
+/*Styles the footer navigation bar itself*/
+.footnav {
+  background-color: yellowgreen;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.footnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.footnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link CHANGE THIS COLOR */
+.footnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Carousel background I think */
+.gallery {
+  background: #EEE;
+}
+
+/* Current cell? */
+.gallery-cell {
+  width: 66%;
+  height: 65vh;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+
+/* Carousel cell number - Not sure what this does yet */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+/*Responsive begins */
+@media screen and (max-width: 680px) {
+  .sidenav {
+    font-size: 8pt;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .sidenav {
+    display: none;
+  }
+  
+  .col-1 {
+    display: none;
+  }
+} 
+  @media screen and (max-width: 560px) {
+    .topnav a{
+      padding: 5%;
+    }
+  }    
+  @media screen and (max-width: 400px) {
+  .topnav a:first-child {
+    top: 0;
+  }
+}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .footnav a:first-child {
+    display: none;}
+
+  .footnav a.icon {
+    float: right;
+    display: block;
+  }
+  @media screen and (max-width: 260px) {
+    .topnav a:first-child {
+      display:none;
+    }
+    .topnav a {
+      font-size: 14px;
+    }
+    .footnav a{
+      font-size: 14px;
+      padding: 5%;
+    }
+}
