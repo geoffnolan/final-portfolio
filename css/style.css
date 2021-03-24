@@ -9,23 +9,28 @@ body {
   min-height: 100vh;
   flex-direction: row;
   margin: 0;
+  font-family: Monaco, Menlo,'Ubuntu Mono', Consolas, source-code-pro, monospace;
 }
 
 /*Left bar*/
 .col-1 {
-  flex: 0;
-  background: #D7E8D4;
-  width: 10%;
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  flex: 0.2;
+  background: #347e6c;
+  justify-content: left;
+  align-items: left;
+
 }
 
-/*This code may or may not help center my links on left bar*/
-.col-1:first-child > span {
+/* Centers the text/content on the left bar*/
+.col-1 > .sidenav > * {
+  max-height: 100%;
+  width: 200px;
   margin-right: auto;
-}
-.col-1:last-child > span {
-  margin-left: auto;
+  margin-left: 10vh;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+  color: white;
 }
 
 /*Col-2 is parent of header, content, footer*/
@@ -59,7 +64,7 @@ header {
 
 /*Code to keep header and footer the same color*/
 header, footer {
-  background: yellowgreen;
+  background: #14312b;
   height: 15vh;
   max-height: 15vh;
   overflow: hidden;
@@ -88,7 +93,7 @@ header, footer, article, nav {
 
 /* Adds a color to the active/current link in the header links */
 .topnav a.active {
-  background-color: #4CAF50;
+  background-color: #3c7b15;
   color: white;
 }
 
@@ -128,7 +133,7 @@ a{
 
 /*Styles the footer navigation bar itself*/
 .footnav {
-  background-color: yellowgreen;
+  background-color: #14312b;
   overflow: hidden;
 }
 
@@ -150,7 +155,7 @@ a{
 
 /* Add a color to the active/current link CHANGE THIS COLOR */
 .footnav a.active {
-  background-color: #4CAF50;
+  background-color: #206647;
   color: white;
 }
 
@@ -164,8 +169,8 @@ a{
   width: 60%;
   height: 65vh;
   margin-right: 10px;
-  background: #8C8;
-  opacity: 0.25;
+  background: none;
+  opacity: 1;
   counter-increment: gallery-cell;
 }
 
@@ -177,6 +182,14 @@ a{
   line-height: 200px;
   font-size: 80px;
   color: white;
+}
+
+/* Center single images inside the carousel div */
+.gallery-cell > img {
+  position: absolute;
+  display: block;
+  margin: -20vh 25% 25% 25%;
+  max-width: 200px;
 }
 
 /*Responsive begins */
@@ -195,37 +208,37 @@ a{
     display: none;
   }
 } 
-  @media screen and (max-width: 560px) {
-    .topnav a, .footnav a{
-      padding: 2.5vw;
-    }
-  }    
-  @media screen and (max-width: 400px) {
-  .topnav a:first-child {
-    top: 0;
+@media screen and (max-width: 560px) {
+  .topnav a, .footnav a{
+    padding: 2.5vw;
   }
+}    
+@media screen and (max-width: 400px) {
+.topnav a:first-child {
+  top: 0;
 }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
+}
+.topnav a.icon {
+  float: right;
+  display: block;
+}
 
-  .footnav a:first-child {
-    display: none;}
+.footnav a:first-child {
+  display: none;}
 
-  .footnav a.icon {
-    float: right;
-    display: block;
+.footnav a.icon {
+  float: right;
+  display: block;
+}
+@media screen and (max-width: 260px) {
+  .topnav a:first-child {
+    display:none;
   }
-  @media screen and (max-width: 260px) {
-    .topnav a:first-child {
-      display:none;
-    }
-    .topnav a {
-      font-size: 14px;
-    }
-    .footnav a{
-      font-size: 14px;
-      padding: 5%;
-    }
+  .topnav a {
+    font-size: 14px;
+  }
+  .footnav a{
+    font-size: 14px;
+    padding: 5%;
+  }
 }
