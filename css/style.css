@@ -28,7 +28,7 @@ body {
   width: 200px;
   margin-right: auto;
   margin-left: 10vh;
-  margin-top: 20vh;
+  margin-top: 100%;
   margin-bottom: 20vh;
   color: white;
 }
@@ -72,7 +72,7 @@ header, footer {
 
 /* Padding for everything except the sidenav */
 header, footer, article, nav {
-  padding: 10px;
+  padding: 0px;
 }
 
 /* Styling the links inside the header navigation bar */
@@ -95,6 +95,7 @@ header, footer, article, nav {
 .topnav a.active {
   background-color: #3c7b15;
   color: white;
+  font-weight: bold;
 }
 
 /* Removes all link underlines */
@@ -113,31 +114,13 @@ a{
   width: 10%;
 }
 
-/*Adds hover glow around links in sidenav*/
-.sidenav a:hover {
-  background-color: #fff;
-  color: black;
-}
-
-/*Styles links in the side navigation bar */
-.sidenav a {
-  position: relative;
-  line-height: 1em;
-  text-decoration: none;
-  font-family: helvetica;
-  color: rgba(#FFF, 0.35);
-  font-size: 10pt;
-  transition: all ease-out 300ms;
-  text-align: left;
-}
-
 /*Styles the footer navigation bar itself*/
 .footnav {
   background-color: #14312b;
   overflow: hidden;
 }
 
-/* Style the links inside the navigation bar */
+/* Style the links inside the footer navigation bar */
 .footnav a {
   float: left;
   color: #f2f2f2;
@@ -153,7 +136,7 @@ a{
   color: black;
 }
 
-/* Add a color to the active/current link CHANGE THIS COLOR */
+/* Add a color to the active/current link */
 .footnav a.active {
   background-color: #206647;
   color: white;
@@ -161,6 +144,7 @@ a{
 
 /* Carousel background I think */
 .gallery {
+  position: relative;
   background: #EEE;
 }
 
@@ -187,15 +171,19 @@ a{
 /* Center single images inside the carousel div */
 .gallery-cell > img {
   position: absolute;
-  display: block;
-  margin: -20vh 25% 25% 25%;
-  max-width: 200px;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  max-width: 50vw;
+  max-height: 60vh;
 }
 
 /*Responsive begins */
-@media screen and (max-width: 680px) {
-  .sidenav {
-    font-size: 8pt;
+
+@media screen and (max-width: 775px) {
+
+  .col-1 {
+    display: none;
   }
 }
 
@@ -241,4 +229,5 @@ a{
     font-size: 14px;
     padding: 5%;
   }
+  
 }
