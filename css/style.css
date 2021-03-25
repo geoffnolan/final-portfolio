@@ -38,6 +38,22 @@ body {
   color: white;
   font-size: 14px;
 }
+/* Centers the text/content on the left bar Mozilla-style -moz-*/
+.col-1 > .sidenav > * {
+  -moz-max-height: 75%;
+  -moz-position: relative;
+  -moz-top: 41%;
+  -moz-left: 680%; 
+  -moz-transform: translate(-50%, -50%);
+  -moz-width: 18vw;
+  -moz-max-width: 140px;
+  -moz-margin-right: 10px;
+  -moz-margin-left: 10px;
+  -moz-margin-top: 100%;
+  -moz-margin-bottom: 10px;
+  -moz-color: white;
+  -moz-font-size: 14px;
+}
 
 /*Col-2 is parent of header, content, footer*/
 .col-2 {
