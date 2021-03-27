@@ -184,8 +184,6 @@ a{
 
 /*Responsive begins */
 
-
-
 @media screen and (max-width: 740px) {
   .col-1 {
     width: 150px;
@@ -213,54 +211,55 @@ a{
     padding: 2.5vw;
   }
 }    
-
+@media screen and (max-height: 415px) {
+  .col-1 > .sidenav > p {
+    font-size: 6pt;
+  }
+  .topnav a > *{
+    font-size: 8pt;
+    padding: 8px 8px 8px 8px;
+  }
+  .footnav a > *{
+    font-size: 8pt;
+    padding: 8px 8px 8px 8px;
+  }
+}
+  
+@media screen and (max-height: 250px) {
+  .col-1 {
+    display: none;
+  }
+}
 @media screen and (max-width: 400px) {
   .col-1 {
     display: none;
   }
-  .topnav a:first-child {
-    top: 0;
-}
-}
-.topnav a.icon {
-  float: right;
-  display: block;
-}
-
-.footnav a:first-child {
-  display: none;}
-
-.footnav a.icon {
-  float: right;
-  display: block;
-}
 /* Super tiny screens*/
 
 @media screen and (max-width: 260px) {
-  /* .topnav a:first-child {
-    display:none;
-  } */
   .topnav a{
-    font-size: 11px;
+    font-size: 8pt;
   }
   .footnav a {
-    font-size: 11px;
-  }
-
-  
-@media screen and (max-height: 300) {
-  .topnav a{
-    font-size: 10px;
-  }
-  .footnav a{
-    font-size: 10px;
+    font-size: 8pt;
   }
 }
+
+
+@media screen and (max-height: 300px) and (max-width: 510px) {
+  .topnav a{
+    font-size: 6pt;
+  }
+  .footnav a{
+    font-size: 6pt;
+  }
+}
+
+
 
 @media screen and (min-width: 950px) {
   .col-1 > .sidenav > * {
   left: 640%;
+  }
 }
-
-
 }
