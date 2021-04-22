@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<title>Sign up for my bi-weekly newsletter!</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="flickity-docs/flickity.css" media="screen">
+</head>
+<body>
+  <div class="col-1">
+      <div class="sidenav">
+        <p>If you're interested in receiving bi-weekly emails related to UX consulting or my journey into game development,
+           then sign up for my newsletter! I'll be writing about my challenges as I enter the field of UX engineering.
+        </p>
+      </div>
+    </div>
+  <div class="col-2">
+  	<header>
+      <div class="topnav">
+        <a href="index.html">Geoffrey Walchak</a>
+        <a href="ux.html">UX</a>
+        <a href="ui.html">UI</a>
+        <a href="ideas.html">Ideas</a>
+        <a href="contact.html">Contact</a>
+        <a class="active" href="newsletter.html">Newsletter</a>
+      </div> 
+    </header>
+    <main class="content">
+    <article>
+      <div class="card-container">
+        <form action="https://formspree.io/f/mleadalk" method = "post">
+          <fieldset>
+            <legend>Personal Information:</legend>
+            <label for="name">Name</label>
+            <input type="text" id="name"><br/>
+            <label>Email:
+              <input type="email" value = "email@server.com">
+            </label><br/>
+            <label for="birth">DoB for a free gift:</label>
+            <input type="date" id="birth"><br><br>
+            <label>I would like to receive:</label><br/>
+            <input type="checkbox" id="uxconsulting" name="uxconsulting" value="UX Consulting">
+            <label for="uxconsulting"> UX Consulting tips</label><br>
+            <input type="checkbox" id="gamedevelopment" name="gamedevelopment" value="Game development">
+            <label for="gamedevelopment"> Game development wisdom</label><br>
+            <input type="checkbox" id="music" name="music" value="Music recommendations">
+            <label for="music"> Music recommendations</label><br> 
+            <br>
+            <label for="survey">Survey: How did you like my site?</label>
+            <select id="survey" name="survey">
+              <option value="select">(Select one)</option>
+              <option value="fantastic">It's fantastic! Couldn't be better.</option>
+              <option value="great">It looks great!</option>
+              <option value="good">It looks pretty good.</option>
+              <option value="needswork">It still needs work. Keep it up!</option>
+              <option value="nottosay">I prefer not to say.</option>
+            </select> <br><br>
+            <input type = "submit" value = "Subscribe!">
+          </fieldset>
+          
+        </form>
+    </div>
+    </article>
+    </main>
+  	<footer>
+      <div class="footnav2">
+        <a href="resume.html" target = "_blank">Resumé</a>
+        <a href="https://github.com/geoffnolan/" target="_blank">Github</a>
+        <a href="https://www.linkedin.com/in/geoffrey-walchak/" target="_blank">LinkedIn</a>
+        <a href="https://twitter.com/geoffreywalchak" target="_blank">Twitter</a>
+    </footer>
+  </div>
+</body>
