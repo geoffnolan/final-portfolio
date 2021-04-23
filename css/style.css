@@ -26,8 +26,7 @@ body {
 
 /* Centers the text/content on the left bar*/
 .col-1 > .sidenav > * {
-  animation-duration: 0.8s;
-  animation-name: slidein;
+  animation: fadeIn ease 5s;
   max-height: 75%;
   position: relative;
   top: 41%;
@@ -491,8 +490,13 @@ a{
 
 /*Animation begins */
 
-@keyframes slidein {
-
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (prefers-reduced-motion) {
