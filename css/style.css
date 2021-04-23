@@ -223,16 +223,52 @@ a{
   max-height: 60vh;
 }
 
+
+.gallery-cell > .wrapper > .box2 > img {
+  position: absolute;
+  top: 50%;
+  left: 23%; 
+  transform: translate(-50%, -50%);
+  max-width: 50vw;
+  max-height: 60vh;
+}
+
+
+.gallery-cell > .wrapper > .box3 > img {
+  position: absolute;
+  top: 50%;
+  left: 73%; 
+  transform: translate(-50%, -50%);
+  max-width: 50vw;
+  max-height: 60vh;
+}
+
+.gallery-cell > .wrapper > .box3 > .text-container {
+  position: absolute;
+  display: flex;
+  transform: translate(-20%, 10%);
+  align-items: center;
+  justify-content: center;
+  font-size: 12pt;
+}
+
+
  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+ .flip-card, .flip-card-inner, .flip-card-front, .flip-card-back, .card-container:focus-within {
+  height: 308px;
+  width: 176px;
+  max-height: 308px;
+  max-width: 176px;
  
- 
+}
+
  .flip-card {
   position: relative;
   background-color: transparent;
-  max-width: 525px;
-  max-height: 300px;
-  height: 525px;
-  width: 300px;
+  max-width: 657px;
+  max-height: 376px;
+  width: 657px;
+  height: 376px;
   border: 1px solid #f1f1f1;
 }
 
@@ -260,8 +296,8 @@ a{
 .flip-card-front, .flip-card-back {
   position: absolute;
   max-width: 100%;
-  height: auto;
-  width: auto;
+  height: fit-content;
+  width: 800px;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
 }
@@ -280,13 +316,22 @@ a{
 } 
 
 .card-container:focus-within {
-  display: flex;
+  display: contents;
   justify-content: left;
   max-height:525px;
   max-width:300px;
 }
 
+/*Flex box */
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr;
+}
+
 /*Responsive begins */
+
+
 
 @media screen and (max-width: 865px) {
   footer {
@@ -318,6 +363,27 @@ a{
   .footnav2 a {
     font-size: 13px;
   }
+  .flip-card {
+    position: relative;
+    background-color: transparent;
+    max-width: 320px;
+    max-height: 230px;
+    width: 320px;
+    height: 230px;
+    border: 1px solid #f1f1f1;
+  }
+  .cardfrontimg, .cardbackimg {
+    height: 230px;
+    width: 320px;
+    max-height: 230px;
+    max-width: 320px;
+  }
+  .gallery-cell > .wrapper > .box3 > img {
+    display: none;
+  }
+  .gallery-cell > .wrapper > .box3 > .text-container {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 570px) {
@@ -330,17 +396,45 @@ a{
   .topnav a, .footnav a{
     padding: 2.5vw;
   }
+
 }    
 
 @media screen and (max-width: 415px) {
   footer {
     padding-left: 0%;
   }
+    .gallery-cell > .wrapper > .box3 > .text-container {
+      font-size: 9pt;
+    }
+    
+    .gallery-cell > img {
+      position: absolute;
+      top: 50%;
+      left: 50%; 
+      transform: translate(-50%, -50%);
+      max-width: 60vw;
+      max-height: 72vh;
+    }
+    .gallery-cell > .wrapper > .box2 > img {
+      position: absolute;
+      top: 50%;
+      left: 50%; 
+      transform: translate(-50%, -50%);
+      max-width: 60vw;
+      max-height: 72vh;
+    }
+    
+    .gallery-cell > .wrapper > .box3 > img {
+      display: none;
+    }
+    .gallery-cell > .wrapper > .box3 > .text-container {
+      display: none;
+    }
 }
 
 @media screen and (max-height: 415px) {
   .col-1 > .sidenav > p {
-    font-size: 6pt;
+    font-size: 8pt;
   }
   .topnav a > *{
     font-size: 8pt;
@@ -357,6 +451,15 @@ a{
   .footnav2 a {
     font-size: 8pt;
     padding: 8px 8px 8px 8px;
+  }
+  .gallery-cell > .wrapper > .box3 > .text-container {
+    position: absolute;
+    display: flex;
+    padding-top: 5%;
+    transform: translate(0%, 0%);
+    align-items: center;
+    justify-content: center;
+    font-size: 8pt;
   }
 }
   
@@ -390,17 +493,32 @@ a{
 
 @media screen and (max-height: 300px) and (max-width: 510px) {
   .topnav a{
-    font-size: 6pt;
+    font-size: 8pt;
   }
   .footnav a{
-    font-size: 6pt;
+    font-size: 8pt;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .gallery-cell > .wrapper > .box3 > .text-container {
+    font-size: 46pt;
+  }
+
 
 @media screen and (min-width: 950px) {
   .col-1 > .sidenav > * {
   left: 640%;
   }
+  .gallery-cell > .wrapper > .box3 > .text-container {
+    position: absolute;
+    display: flex;
+    transform: translate(-20%, 10%);
+    align-items: center;
+    justify-content: center;
+    font-size: 26pt;
+  }
+
 }
 }
 }
@@ -423,4 +541,5 @@ a{
     margin-bottom: 0%;
     width: 100%;
   }
+}
 }
